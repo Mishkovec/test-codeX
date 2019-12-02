@@ -1,0 +1,11 @@
+.canvas_wrapper {
+    width: 640px;
+    height: 640px;
+    border: 1px solid gray;
+}
+.canvas_point {
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    background: lightgray;
+}
