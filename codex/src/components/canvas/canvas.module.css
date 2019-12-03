@@ -2,10 +2,13 @@
     width: 640px;
     height: 640px;
     border: 1px solid gray;
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);    
 }
-.canvas_point {
-    width: 10px;
-    height: 10px;
+.canvas_wrapper>div {
+    width: 17px;
+    height: 17px;
     border: 1px solid gray;
     background: lightgray;
 }
