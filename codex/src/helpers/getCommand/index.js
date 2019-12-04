@@ -10,7 +10,7 @@ function getCommand (value) {
     let commanArr = value.split(' ');
 
     if (commanArr[0] === 'C') {
-        canvasX = Number(commanArr[1]);
+        canvasX = Number(commanArr[1])+2;
         canvasY = Number(commanArr[2]);
         canvas = createCanvas(canvasX, canvasY);  
        
@@ -28,7 +28,7 @@ function getCommand (value) {
             return canvas.join('\n');
         }
         if (commanArr[0] === 'B') {
-            canvas=createBucketFill(canvas,commanArr[1],commanArr[2],commanArr[3]);
+            canvas=createBucketFill(canvas,commanArr[1],commanArr[2],commanArr[3],canvasX,canvasY);
             if(typeof canvas == 'string') {return canvas}
             return canvas.join('\n');
         }

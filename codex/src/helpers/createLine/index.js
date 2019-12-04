@@ -12,9 +12,9 @@ function createLine (canvas, x1, y1, x2, y2,cnvX,cnvY) {
     if (X1==0 || X2==0 || Y1==0 || Y2==0) {
         return `position can't be 0`;
     }
-    // if (X1>=CX || X2>=CX || Y1>=CY || Y2>=CY) {
-    //     return `position can't be equally canvas size`;
-    // }
+    if (X1>=CX-1 || X2>=CX-1 || Y1>CY || Y2>CY) {
+        return `position can't be equally canvas size`;
+    }
     
     if (Y1-Y2 == 0 ) {
         return createLineX (canvas, X1, Y1, X2, Y2);
