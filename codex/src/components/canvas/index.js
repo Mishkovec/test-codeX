@@ -1,25 +1,14 @@
 import React from 'react';
 import styles from './canvas.module.css';
+import { Input } from 'antd';
 
+const { TextArea } = Input;
 
-let createField = () => {    
-    let children = [];
-        for (let i = 0; i < 1024; i++) {
-            children.push(React.createElement('div', null, null));
-        }
-    return children;
-}
-
-
-export default class Canvas extends React.Component {    
-    render() {
-        return (
-            <div 
-                className={styles.canvas_wrapper}
-                onClick={(e)=>{e.target.style.background = 'black'}}
-            > 
-                {createField()}               
-            </div>
+function Canvas (props) {   
+        return (            
+            <TextArea rows={10} 
+                value={props.canvasValue}                
+            />
         )
-    }
 }
+export default Canvas;
