@@ -4,21 +4,26 @@ import createBucketFill from '../createBucketFill';
 import createRectangle from '../createRectangle';
 
 let canvas = '';
+let canvasX = '';
+let canvasY = '';
 function getCommand (value) { 
     let commanArr = value.split(' ');
 
     if (commanArr[0] === 'C') {
-        canvas = createCanvas(commanArr[1], commanArr[2]);        
+        canvasX = Number(commanArr[1]);
+        canvasY = Number(commanArr[2]);
+        canvas = createCanvas(canvasX, canvasY);  
+       
         return canvas.join('\n');
     }
     if (canvas!=='') {
         if (commanArr[0] === 'L') {
-            canvas=createLine(canvas,commanArr[1],commanArr[2],commanArr[3],commanArr[4]);
+            canvas=createLine(canvas,commanArr[1],commanArr[2],commanArr[3],commanArr[4],canvasX,canvasY);
             if(typeof canvas == 'string') {return canvas}
             return canvas.join('\n');
         }
         if (commanArr[0] === 'R') {
-            canvas=createRectangle(canvas,commanArr[1],commanArr[2],commanArr[3],commanArr[4]);
+            canvas=createRectangle(canvas,commanArr[1],commanArr[2],commanArr[3],commanArr[4],canvasX,canvasY);
             if(typeof canvas == 'string') {return canvas}
             return canvas.join('\n');
         }
