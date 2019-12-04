@@ -6,7 +6,7 @@ const { TextArea } = Input;
 
 function Canvas (props) {   
         return (            
-            <TextArea rows={10} 
+            <TextArea rows={22} 
                 value={props.canvasValue}                
             />
         )
