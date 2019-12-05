@@ -28,6 +28,7 @@ function App () {
                         />
                         <Button onClick={enterCommand}> Enter </Button>
                     </div>
+                    <p>!!! to display the result correctly, copy the output value to notepad</p>
                     <Canvas
                         canvasValue={canvasValue}
                     />
