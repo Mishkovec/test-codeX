@@ -16,6 +16,7 @@ function ComandListComponent (e) {
                 <Title level={4}>L 1 2 6 2 - create line</Title>
                 <Title level={4}>R 16 1 20 3 - create rechtangle</Title>
                 <Title level={4}>B 10 3 o - bucket fill (color o)</Title>
+                <Title level={3}>!!! BucketFill only for empty areas</Title>
             </div> 
         )
 }
