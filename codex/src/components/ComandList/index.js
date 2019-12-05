@@ -14,7 +14,7 @@ function ComandListComponent (e) {
                 <Title level={2}>Commands Example</Title>
                 <Title level={4}>C 20 4 - create canvas</Title>
                 <Title level={4}>L 1 2 6 2 - create line</Title>
-                <Title level={4}>R 15 1 18 3 - create rechtangle</Title>
+                <Title level={4}>R 16 1 20 3 - create rechtangle</Title>
                 <Title level={4}>B 10 3 o - bucket fill (color o)</Title>
             </div> 
         )

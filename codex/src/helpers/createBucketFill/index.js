@@ -1,3 +1,5 @@
+import bucketFillY from '../bucketFillY';
+
 function createBucketFill (canvas, x, y, color,cnvX,cnvY) { 
     let X = Number(x);
     let Y = Number(y);
@@ -7,12 +9,11 @@ function createBucketFill (canvas, x, y, color,cnvX,cnvY) {
     let point = canvas[Y].split('');
 
     if (point[X]=='x') {
-        point[X]='A'
-        canvas[Y]=point.join('')
+        canvas=bucketFillY(canvas,X,Y,CX,CY,color,'x');
     }
-    if (point[X]==' ') {
-        point[X]=color
-        canvas[Y]=point.join('')
+    //----------------
+    if (point[X]!=='x') {
+        canvas=bucketFillY(canvas,X,Y,CX,CY,color,' ');        
     } 
     
     return canvas;
